@@ -12,6 +12,25 @@ export default function SettingsModal() {
       <div className={styles.modal}>
         <h3>Settings</h3>
         <div>
+          <label htmlFor='theme' className='label'>
+            Theme
+          </label>
+          <select
+            id='theme'
+            value={options.theme}
+            className='select w-full'
+            onChange={(e) =>
+              setOptions((prev) => ({
+                ...prev,
+                theme: e.target.value as (typeof options)['theme'],
+              }))
+            }
+          >
+            <option value='light'>Light</option>
+            <option value='dark'>Dark</option>
+          </select>
+        </div>
+        <div>
           <label htmlFor='display_tables' className='label'>
             Display tables
           </label>

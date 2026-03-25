@@ -3,7 +3,7 @@ import { createContext, useContext } from 'react';
 export interface SettingsContextType {
   isModalOpen: boolean;
   toggleModal: () => void;
-  options: { displayTables: 'list' | 'grid' };
+  options: { theme: 'light' | 'dark'; displayTables: 'list' | 'grid' };
   setOptions: (opt: SettingsContextType['options']) => void;
 }
 
